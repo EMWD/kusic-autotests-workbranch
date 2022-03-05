@@ -14,7 +14,7 @@ class WebDriver():
     def get_driver(self):
         if self.method_ == 'local':
             from webdriver_manager.chrome import ChromeDriverManager
-            return webdriver.Chrome(ChromeDriverManager().install())
+            return webdriver.Chrome(ChromeDriverManager(log_level=0).install(), service_log_path=False)
         
         elif self.method_ == 'global':
             return webdriver.Chrome(self.path_)
