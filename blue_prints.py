@@ -1,12 +1,12 @@
 # login test
 
-from src.tests.Login import Login
+from src.tests.Auth import Auth
 
 form_data = {
    'login_field': {'obj':'id_username', 'by':'id'},
    'password_field': {'obj':'id_password', 'by':'id'},
    'button': {'obj':'btn-primary', 'by':'class'},
-   'login': 'admin2',
+   'login': 'SOME_LOGIN',
    'password': 'SOME_PASSWORD',
 }
 check_data = {
@@ -14,8 +14,8 @@ check_data = {
    'find': 'title',
    'value': "It's time to use Bot in your server"
 }
-l = Login('https://langa.xyz/login', form_data=form_data, check_data=check_data)
-l.login_test()
+l = Auth('https://langa.xyz/login', form_data=form_data, check_data=check_data)
+l.test_login()
 
 #available test
 

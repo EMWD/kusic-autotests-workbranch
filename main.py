@@ -1,2 +1,2 @@
 from icecream import ic
-from src.tests.Login import Login
+from src.tests.Auth import Auth
